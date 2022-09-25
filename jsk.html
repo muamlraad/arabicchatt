@@ -1,0 +1,746 @@
+<html><head><meta charset="UTF-8"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover"><meta name="sentry-trace"><meta name="baggage"><title data-react-helmet="true">شحن - لحظات دردشة جماعية صوتية</title><meta name="description" content="شات لحظات ، دردشة لحظات ، لحظات ، شات لحظات حب ، دردشة لحظات حب ، شات لحظات حب  للجوال ، دردشة لحظات حب للجوال، لحظات ،دردشة عربية،دردشه عربية،دردشة عربيه،دردشة عربية،شات عربي ،شات العرب،دردشة العرب،دردشه العرب،جات عربي،جات العرب،عرب شات،جات لحظات "><meta content="شات لحظات ، دردشة لحظات ، لحظات ، شات لحظات حب ، دردشة لحظات حب ، شات لحظات حب  للجوال ، دردشة لحظات حب للجوال، لحظات ،دردشة عربية،دردشه عربية،دردشة عربيه،دردشة عربية،شات عربي ،شات العرب،دردشة العرب،دردشه العرب،جات عربي،جات العرب،عرب شات،جات لحظات " name="keywords">
+
+
+<style>
+.hiya-wallet-header {
+    height: 184px;
+    width: 100%;
+    padding: 80px 0 22px 0;
+    box-sizing: border-box
+}
+
+.hiya-wallet-header.wallet {
+    background: url(https://www.arabe.chat/sico/1661219995554.png) 0 -20px;
+    background-size: cover
+}
+
+.hiya-wallet-header .hiya-wallet-balance {
+    display: flex;
+    height: 78px;
+    justify-content: space-between;
+    align-items: center
+}
+
+
+.hiya-wallet-header .hiya-wallet-balance div {
+    padding: 0 20px
+}
+
+.hiya-wallet-header .hiya-wallet-balance p {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255,255,255,.6)
+}
+
+.hiya-wallet-header .hiya-wallet-balance .balanceCnt {
+    font-size: 36px;
+    font-weight: 800;
+    color: #fff
+}
+
+
+.rmc-picker {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    -webkit-box-flex: 1;
+    flex: 1;
+    text-align: center;
+}
+.hiya-wallet-rechargs {
+    background-color: #f8f8f8;
+    font-family: PingFangSC-Regular;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: calc(100vh - 162px);
+    background: #f8f8f8;
+    border-radius: 14px 14px 0px 0px;
+    margin-top: -17px;
+    padding: 14px 16px 89px
+}
+
+.hiya-wallet-rechargs .listWrap {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    overflow: hidden;
+    max-height: 1000px;
+    transition: all .38s
+}
+
+.hiya-wallet-rechargs .hideList {
+    max-height: 0px
+}
+
+
+.hiya-wallet-rechargs li {
+    position: relative;
+    display: inline-block;
+    flex: 0 0 30%;
+    padding: 16px 0 12px;
+    margin: 3% 1.5% 0 1.5%;
+    text-align: center;
+    background: #fff;
+    border-radius: 8px
+}
+
+.hiya-wallet-rechargs li.weeklyCard {
+    background: linear-gradient(180deg, #f6f9ff 0%, rgba(202, 220, 255, 0) 100%) no-repeat,#fff no-repeat;
+    background-size: 100% 82px
+}
+
+.hiya-wallet-rechargs li.weeklyCard .weeklyBar {
+    box-sizing: border-box;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translate(-50%);
+    min-width: 110px;
+    height: 22px;
+    padding: 2px 8px 0;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap
+}
+
+.hiya-wallet-rechargs li.weeklyCard .weeklyBar.bgAr {
+    background: url(https://www.arabe.chat/sico/1661226512908.png) no-repeat center/100% 100%
+}
+
+.hiya-wallet-rechargs li.weeklyCard .coins {
+    font-size: 13px;
+    line-height: 16px;
+    margin: 3px 0 10px 0
+}
+
+.hiya-wallet-rechargs li.weeklyCard .coins::after {
+    bottom: -6px
+}
+
+.hiya-wallet-rechargs li.weeklyCard .coins .avgDay {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: normal;
+    text-align: center;
+    color: #a3acb8
+}
+
+.hiya-wallet-rechargs li i {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url(https://www.arabe.chat/sico/1661226505796.png) no-repeat;
+    background-size: cover
+}
+
+.hiya-wallet-rechargs li .coins {
+    position: relative;
+    margin: 10px 0 15px 0;
+    color: #252525;
+    font-size: 14px;
+    font-weight: bold
+}
+
+.hiya-wallet-rechargs li .coins>span {
+    display: inline-block;
+    width: 100%
+}
+
+.hiya-wallet-rechargs li .coins .addedCoins {
+    margin-top: 4px;
+    color: #ff7136
+}
+
+.hiya-wallet-rechargs li .price {
+    font-size: 14px;
+    font-weight: bold;
+    color: #a3acb8
+}
+.hiya-wallet-rechargs li .noticebar {
+    box-sizing: border-box;
+    padding: 0 6px 0 26px;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 110px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    background: url(https://www.arabe.chat/sico/1661226506976.png) no-repeat center/100% 100%
+}
+
+
+
+.hiya-wallet-rechargs .gradientBg {
+    background: linear-gradient(180deg, rgba(255, 219, 150, 0.3) 0%, rgba(255, 166, 18, 0) 100%) no-repeat,#fff no-repeat;
+    background-size: 100% 82px
+}
+
+.hiya-wallet-aristocracyTip {
+    margin-right: 5px;
+    flex: 1;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-family: PingFangSC-Medium,PingFang SC;
+    font-weight: 500;
+    color: #a3acb8;
+    line-height: 20px
+}
+
+
+.hiya-wallet-recharge-refund {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden
+}
+
+.hiya-wallet-recharge-refund img {
+    width: 100%;
+    height: 100%;
+    display: block
+}
+
+@-webkit-keyframes marquee {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(-50%)
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(-50%)
+    }
+}
+
+@-webkit-keyframes marqueeAr {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(50%)
+    }
+}
+
+@keyframes marqueeAr {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(50%)
+    }
+}
+
+
+.showHiyaPicker-mask {
+    background: rgba(0,0,0,.5)
+}
+
+.hiya-wallet-top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    display: flex;
+    height: 44px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    color: #fff
+}
+
+.hiya-wallet-top-bar>span {
+    font-size: 15px;
+    font-weight: 550;
+    color: #fff
+}
+
+
+.hiya-wallet-top-bar .hiya-wallet-tab-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    direction: ltr
+}
+
+.hiya-wallet-top-bar .hiya-wallet-tab-bar span {
+    display: inline-block;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffffb3
+}
+
+.hiya-wallet-top-bar .hiya-wallet-tab-bar span.active {
+    color: #fff
+}
+
+:root {
+    --swiper-theme-color: #007aff
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1
+}
+
+.swiper-vertical>.swiper-wrapper {
+    flex-direction: column
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box
+}
+
+.swiper-android .swiper-slide,.swiper-wrapper {
+    transform: translate3d(0px,0,0)
+}
+
+.swiper-pointer-events {
+    touch-action: pan-y
+}
+
+.swiper-pointer-events.swiper-vertical {
+    touch-action: pan-x
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform
+}
+
+.swiper-slide-invisible-blank {
+    visibility: hidden
+}
+
+.swiper-autoheight,.swiper-autoheight .swiper-slide {
+    height: auto
+}
+
+.swiper-autoheight .swiper-wrapper {
+    align-items: flex-start;
+    transition-property: transform,height
+}
+
+.swiper-3d,.swiper-3d.swiper-css-mode .swiper-wrapper {
+    perspective: 1200px
+}
+
+.swiper-3d .swiper-cube-shadow,.swiper-3d .swiper-slide,.swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top,.swiper-3d .swiper-wrapper {
+    transform-style: preserve-3d
+}
+
+.swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10
+}
+
+.swiper-3d .swiper-slide-shadow {
+    background: rgba(0,0,0,.15)
+}
+
+.swiper-3d .swiper-slide-shadow-left {
+    background-image: linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))
+}
+
+.swiper-3d .swiper-slide-shadow-right {
+    background-image: linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))
+}
+
+.swiper-3d .swiper-slide-shadow-top {
+    background-image: linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))
+}
+
+.swiper-3d .swiper-slide-shadow-bottom {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))
+}
+
+.swiper-css-mode>.swiper-wrapper {
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none
+}
+
+.swiper-css-mode>.swiper-wrapper::-webkit-scrollbar {
+    display: none
+}
+
+.swiper-css-mode>.swiper-wrapper>.swiper-slide {
+    scroll-snap-align: start start
+}
+
+.swiper-horizontal.swiper-css-mode>.swiper-wrapper {
+    scroll-snap-type: x mandatory
+}
+
+.swiper-vertical.swiper-css-mode>.swiper-wrapper {
+    scroll-snap-type: y mandatory
+}
+
+.swiper-centered>.swiper-wrapper::before {
+    content: '';
+    flex-shrink: 0;
+    order: 9999
+}
+
+.swiper-centered.swiper-horizontal>.swiper-wrapper>.swiper-slide:first-child {
+    margin-inline-start:var(--swiper-centered-offset-before)}
+
+.swiper-centered.swiper-horizontal>.swiper-wrapper: :before {
+    height:100%;
+    min-height: 1px;
+    width: var(--swiper-centered-offset-after)
+}
+
+.swiper-centered.swiper-vertical>.swiper-wrapper>.swiper-slide:first-child {
+    margin-block-start:var(--swiper-centered-offset-before)}
+
+.swiper-centered.swiper-vertical>.swiper-wrapper: :before {
+    width:100%;
+    min-width: 1px;
+    height: var(--swiper-centered-offset-after)
+}
+
+.swiper-centered>.swiper-wrapper>.swiper-slide {
+    scroll-snap-align: center center
+}
+
+.hiyawallet {
+    position: relative
+}
+
+.hiya-wallet-modal {
+    width: 78.6vw;
+    box-sizing: border-box;
+    padding: 24px;
+    border-radius: 7px;
+    background-color: #fff;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.hiya-wallet-modal p {
+    font-size: 15px;
+    font-family: SFPro-Medium,SFPro;
+    font-weight: 500;
+    color: #7a8396;
+    line-height: 24px;
+    text-align: center
+}
+
+.hiya-wallet-modal-btn {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.hiya-wallet-modal span {
+    display: inline-block;
+    width: 46.6%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #f2f2f2;
+    border-radius: 22px;
+    color: #333
+}
+
+.hiya-wallet-modal span.hiya-wallet-modal-no {
+    color: #fff;
+    background: #9226fe
+}
+
+.diamonds {
+    overflow: hidden;
+    height: 100vh
+}
+
+
+.hiya-wallet-rechargs {
+    background-color: #f8f8f8;
+    font-family: PingFangSC-Regular;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: calc(100vh - 162px);
+    background: #f8f8f8;
+    border-radius: 14px 14px 0px 0px;
+    margin-top: -17px;
+    padding: 14px 16px 89px
+}
+
+.hiya-wallet-bannerList {
+    position: relative;
+    margin: 20px auto 0;
+    width: 92vw;
+    height: 27vw;
+    overflow: hidden;
+}
+
+.hiya-wallet-bannerList {
+    position: relative;
+    margin: 20px auto 0;
+    width: 92vw;
+    height: 27vw;
+    overflow: hidden;
+}
+.hiya-wallet-feedback p {
+    text-align: center;
+}
+.hiya-wallet-feedback :nth-child(2) {
+    font-size: 12px;
+    font-weight: 500;
+    color: #9226fe;
+    text-decoration: underline;
+}
+.hiya-wallet-feedback {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #f8f8f8;
+}</style>
+<style>.toastModal_scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    height: 100vh
+}
+
+.toastModal_scroll.disable {
+    overflow-y: hidden
+}
+
+.toastModal_lower {
+    transform: translateY(0px) !important;
+    z-index: -1 !important
+}
+
+.toastModal_mask {
+    position: relative;
+    margin: -16px;
+    width: 100vw;
+    height: 100vh
+}
+
+.toastModal_maskAllBlack {
+    background: #000 !important
+}
+
+.toastModal_maskHalfBlack {
+    background: rgba(0,0,0,.6) !important
+}
+
+.toastModal_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.no-flip-over {
+    display: inline-block
+}
+
+body[data-lang=ar] .no-flip-over {
+    transform: scaleX(-1);
+    direction: rtl
+}
+
+/* Make clicks pass-through */
+#nprogress {
+    pointer-events: none;
+}
+
+#nprogress .bar {
+    background: #29d;
+    position: fixed;
+    z-index: 1031;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+    display: block;
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    height: 100%;
+    box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+    opacity: 1.0;
+    -webkit-transform: rotate(3deg) translate(0px, -4px);
+    -ms-transform: rotate(3deg) translate(0px, -4px);
+    transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove these to get rid of the spinner */
+#nprogress .spinner {
+    display: block;
+    position: fixed;
+    z-index: 1031;
+    top: 15px;
+    right: 15px;
+}
+
+#nprogress .spinner-icon {
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+    border: solid 2px transparent;
+    border-top-color: #29d;
+    border-left-color: #29d;
+    border-radius: 50%;
+    -webkit-animation: nprogress-spinner 400ms linear infinite;
+    animation: nprogress-spinner 400ms linear infinite;
+}
+
+.nprogress-custom-parent {
+    overflow: hidden;
+    position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner, .nprogress-custom-parent #nprogress .bar {
+    position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes nprogress-spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+*[tabindex] {
+    outline: none
+}
+body {
+    font-family: "SFPro-Regular";
+    margin: 0;
+    padding: 0;
+    background-color: #fff
+}
+
+p {
+    margin: 0
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 0
+}
+
+input {
+    padding: 0;
+    border-width: 0;
+    outline: none
+}
+
+textarea {
+    outline: none
+}
+
+ul {
+    margin: 0;
+    padding: 0
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none
+}
+
+</style></head><body data-lang="ar"><div id="app"><div class="AppMain"><div style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"><div class="go3728504636" style="left:0px;right:0;display:flex;z-index:9999;position:absolute;transition:all 230ms cubic-bezier(.21,1.02,.73,1);top:50%;transform:translateY(-50%);justify-content:center"><div class="go2072408551 onlyToast" style="opacity:0;background:#363636;color:#fff;text-align:center"><div role="status" aria-live="polite" class="go3958317564">Authorization code error, please login again</div></div></div></div><div class="toastModal_scroll"><div style="min-height:100.1vh"><div class="hiyawallet"><div style="padding-top:33px;opacity:1" class="hiya-wallet-top-bar"><div class="hiya-wallet-tab-bar"><span class="active">محفظة النقود</span></div></div><div class="swiper"><div class="swiper-wrapper"><div class="swiper-slide"><div class="swiper-slide hiya-slide-page"><div><header class="hiya-wallet-header wallet"><div class="hiya-wallet-balance"><div><p>الرصيد</p><p class="balanceCnt">0</p></div></div></header><div class="hiya-wallet-rechargs"><div class="pickerWrap"><div class="hiya-wallet-aristocracyTip"><p>اسعار الكونزات</p></div></div><ul class="listWrap"><li class="gradientBg"><div class="noticebar bgAr"><div>عرض خاص</div></div><i></i><p class="coins"><span>1000</span></p><p class="price">USD<!-- --> <!-- -->0.99</p></li><li class=""><i></i><p class="coins"><span>5070</span></p><p class="price">USD<!-- --> <!-- -->4.99</p></li><li class=""><i></i><p class="coins"><span>27000</span></p><p class="price">USD<!-- --> <!-- -->24.99</p></li><li class=""><i></i><p class="coins"><span>54000</span></p><p class="price">USD<!-- --> <!-- -->49.99</p></li><li class=""><i></i><p class="coins"><span>109000</span></p><p class="price">USD<!-- --> <!-- -->99.99</p></li><li class="weeklyCard"><div class="weeklyBar bgAr">البطاقة الأسبوعية</div><i></i><p class="coins">1100
+</p><p class="avgDay" style="
+    font-size: 3px;
+">AVG 150/DAY</p><p></p><div class="price">USD<!-- --> <!-- -->0.99</div></li></ul><div class="hiya-wallet-bannerList"><div class="swiper-wrapper"><div class="swiper-slide hiya-wallet-recharge-refund"><img src="https://www.arabe.chat/sico/1664083574731.png" alt=""></div></div></div></div><div class="hiya-wallet-feedback"><p style="
+    font-size: 18px;
+    font-weight: 400;
+    color: #a3acb8;
+"> للشحن الحساب يرجى تكلم مع وكيل التطبيق</p><p>moment_1</p></div></div></div></div></div></div></div></div></div></div></div>
+
+
+
+
+
+</body></html>
